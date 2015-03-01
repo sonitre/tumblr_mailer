@@ -1,0 +1,25 @@
+<!-- Email template for tumblr_mailer.js -->
+
+<html>
+<head><meta charset='utf-8'></head>
+<body>
+  <p>Hey <%= firstName %>,</p>
+  <br>
+  <p>
+    It's been almost <%= numMonthsSinceContact %> since we last talked! Aka, I speak to you every day :). This is an auto-generated e-mail I learned to make in Fullstack foundations.
+  </p>
+  <p>
+    It's to tell you that I've been blogging about my experiences at Fullstack on tumblr, and that you can check out my lastest posts here!:
+    <ol>
+      <% for(var i=0; i<latestPosts.length; i++) {%>
+         <li><a href=<%= latestPosts[i].post_url %>><%= latestPosts[i].title %></a></li>
+      <% } %>
+    </ol>
+  </p>
+
+  <p>
+    Lots of love,<br>
+    Sonia
+  </p>
+</body>
+</html>
